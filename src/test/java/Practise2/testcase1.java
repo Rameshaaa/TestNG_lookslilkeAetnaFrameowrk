@@ -1,0 +1,45 @@
+package Practise2;
+
+import java.io.IOException;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import Data.getData;
+import objectRepo.POR;
+import resources.Base;
+
+public class testcase1 extends Base implements POR{
+	
+	Base b = new Base();
+	
+	
+	@BeforeTest
+	public void initiateBrowser() throws IOException
+	{
+		b.getWebDriver();
+		
+	}
+	
+	@Test(dataProvider = "firstTesCase", dataProviderClass= getData.class)
+	public void e2e(String name) throws IOException
+	
+	{
+		
+		b.enterText(entertext, name);
+		b.Click(radiobtn);
+		b.SelectDDropDown(Drpdwn, "Option1");
+		String text = b.getText(textget);
+		System.out.println(text);
+		
+		
+	}
+	
+	@AfterTest
+	public void teardown()
+	{
+		b.close();
+	}
+
+}
