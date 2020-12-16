@@ -2,31 +2,34 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18699" started-at="2020-12-12T10:03:16Z" finished-at="2020-12-12T10:03:35Z">
+  <suite name="Suite" duration-ms="24272" started-at="2020-12-16T10:40:54Z" finished-at="2020-12-16T10:41:18Z">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:cucumberRunner.TestRunner@45dd4eda]" name="feature" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="18699" started-at="2020-12-12T10:03:16Z" finished-at="2020-12-12T10:03:35Z">
-      <class name="Practise2.testcase1">
-        <test-method status="PASS" signature="initiateBrowser()[pri:0, instance:Practise2.testcase1@14acaea5]" name="initiateBrowser" is-config="true" duration-ms="15095" started-at="2020-12-12T15:33:16Z" finished-at="2020-12-12T15:33:31Z">
+    <test name="Test" duration-ms="24272" started-at="2020-12-16T10:40:54Z" finished-at="2020-12-16T10:41:18Z">
+      <class name="cucumberRunner.TestRunner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:cucumberRunner.TestRunner@45dd4eda]" name="setUpClass" is-config="true" duration-ms="603" started-at="2020-12-16T16:10:54Z" finished-at="2020-12-16T16:10:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initiateBrowser -->
-        <test-method status="PASS" signature="e2e(java.lang.String)[pri:0, instance:Practise2.testcase1@14acaea5]" name="e2e" duration-ms="2713" started-at="2020-12-12T15:33:31Z" data-provider="firstTesCase" finished-at="2020-12-12T15:33:34Z">
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:cucumberRunner.TestRunner@45dd4eda]" name="feature" duration-ms="23475" started-at="2020-12-16T16:10:54Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2020-12-16T16:11:18Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Ramesh]]>
+                <![CDATA[Testing practise site]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- e2e -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:Practise2.testcase1@14acaea5]" name="teardown" is-config="true" duration-ms="821" started-at="2020-12-12T15:33:34Z" finished-at="2020-12-12T15:33:35Z">
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:cucumberRunner.TestRunner@45dd4eda]" name="tearDownClass" is-config="true" duration-ms="5" started-at="2020-12-16T16:11:18Z" finished-at="2020-12-16T16:11:18Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- Practise2.testcase1 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- cucumberRunner.TestRunner -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -12,6 +12,8 @@ public class getData {
 		data[0][0] = "Ramesh";
 		
 		return data;
+		
+		
 	}
 	
 	@DataProvider(name = "SecondData")

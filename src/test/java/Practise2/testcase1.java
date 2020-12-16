@@ -18,7 +18,7 @@ public class testcase1 extends Base implements POR{
 	@BeforeTest
 	public void initiateBrowser() throws IOException
 	{
-		b.getWebDriver();
+		b.launchURL();
 		
 	}
 	
@@ -26,7 +26,7 @@ public class testcase1 extends Base implements POR{
 	public void e2e(String name) throws IOException
 	
 	{
-		
+		b.ExplicityWait(entertext, 10);
 		b.enterText(entertext, name);
 		b.Click(radiobtn);
 		b.SelectDDropDown(Drpdwn, "Option1");

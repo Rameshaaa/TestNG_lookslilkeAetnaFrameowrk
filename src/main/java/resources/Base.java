@@ -4,9 +4,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,12 +11,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.logging.LogType;
-import org.openqa.selenium.logging.LoggingPreferences;
-import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 
-public class Base {
+public class Base extends Reporter{
 		
 	public WebDriver driver;
 	public Properties prop;
@@ -29,7 +26,7 @@ public class Base {
 	String baseURL;
 	
 	
-public WebDriver getWebDriver() throws IOException
+public WebDriver launchURL() throws IOException
 	
 	{
 		
@@ -75,11 +72,23 @@ baseURL = prop.getProperty("url");
 		
 } 
 	
-public WebElement enterText(By str, String Str1)
+public WebElement enterText(By obj, String Str1)
 
 {
-	WebElement element = driver.findElement(str);
-	element.sendKeys(Str1);
+	WebElement element = null;
+
+	try {
+		
+		element = driver.findElement(obj);
+		element.sendKeys(Str1);
+		
+	} 
+	
+	catch (Exception  e)
+	{
+		Reporter.log("Webelement is not available");
+		
+	}
 	return element;
 }
 
@@ -94,10 +103,18 @@ public WebElement Click(By str) {
 
 public Select SelectDDropDown(By Str, String str2)
 
-{
-	Select s = new Select(driver.findElement(Str));
-	s.selectByVisibleText(str2);
-	return s;
+{	
+	try {
+		Select s = new Select(driver.findElement(Str));
+		s.selectByVisibleText(str2);
+		return s;
+	} 
+	catch (Exception e)
+	{
+		Reporter.log("Nothing");
+	}
+	return null;
+	
 }
 
 public String getText(By Str)
@@ -111,5 +128,11 @@ public void close()
 
 {
 	driver.close();
+}
+
+public void ExplicityWait(By obj, int maxTimeout) {
+	
+	WebDriverWait wait = new WebDriverWait(driver, maxTimeout);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(obj));
 }
 }
