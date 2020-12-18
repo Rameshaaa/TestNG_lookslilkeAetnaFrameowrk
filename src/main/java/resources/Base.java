@@ -37,6 +37,8 @@ prop.load(fis);
 browserName = prop.getProperty("browser");
 System.out.println(browserName);
 
+
+
 if (browserName.equals("chrome")) 
 	
 {
@@ -135,4 +137,6 @@ public void ExplicityWait(By obj, int maxTimeout) {
 	WebDriverWait wait = new WebDriverWait(driver, maxTimeout);
 	wait.until(ExpectedConditions.visibilityOfElementLocated(obj));
 }
+
+
 }

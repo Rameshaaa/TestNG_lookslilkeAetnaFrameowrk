@@ -11,18 +11,17 @@ import resources.Base;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-public class stepDenifition extends Base implements POR{
+public class SecondCase extends Base implements POR{
 	
 		Base b = new Base();
-		
-	    @Given("^User in Practise page$")
-	    public void user_in_practise_page() throws Throwable {
-	    	b.launchURL();
+	
+		@Given("^Practise page of User$")
+	    public void practise_page_of_user() throws Throwable {
+			b.launchURL();
 	    }
 
-	    @When("^User enter (.+) in the page$")
-	    public void user_enter_in_the_page(String name) throws Throwable {
-	    	
+	    @When("^Enter (.+) in the page$")
+	    public void enter_in_the_page(String name) throws Throwable {
 
 			b.ExplicityWait(entertext, 10);
 			b.enterText(entertext, name);
@@ -33,8 +32,8 @@ public class stepDenifition extends Base implements POR{
 	       
 	    }
 	    
-	    @When("^User entering incorrect (.+) in the page$")
-	    public void user_entering_incorrect_in_the_page(String name) throws Throwable {
+	    @When("^Incorrect name entering (.+) in the page$")
+	    public void incorrect_name_entering_in_the_page(String name) throws Throwable {
 	    	b.ExplicityWait(entertext, 10);
 			b.enterText(entertext, name);
 			b.Click(radiobtn);
@@ -43,12 +42,10 @@ public class stepDenifition extends Base implements POR{
 			System.out.println(text);
 	    }
 
-
-	    @Then("^User name entered successfully$")
-	    public void user_name_entered_successfully() throws Throwable {
+	    @Then("^Successfully entered name$")
+	    public void successfully_entered_name() throws Throwable {
 	    	b.close();
 	    }
-
 	}
 
 

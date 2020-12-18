@@ -6,7 +6,7 @@
 <listener class-name="Practise2.Listeners"/>
 </listeners>
 
-<test name="Test">
+<test name="Regression">
     <classes>
       <class name="cucumberRunner.TestRunner"/>
     </classes>

@@ -4,15 +4,15 @@
   <listeners>
     <listener class-name="Practise2.Listeners"/>
   </listeners>
-  <test name="Test(failed)">
+  <test name="Regression(failed)">
     <classes>
       <class name="cucumberRunner.TestRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="feature" invocation-numbers="0"/>
+          <include name="feature"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- cucumberRunner.TestRunner -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Regression(failed) -->
 </suite> <!-- Failed suite [Suite] -->

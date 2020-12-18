@@ -16,7 +16,7 @@
 
   <dependencies>
   
-   		<!-- https://mvnrepository.com/artifact/junit/junit -->
+   	<!-- ##################### JUNIT ####################################### -->  		
 	<dependency>
 	    <groupId>junit</groupId>
 	    <artifactId>junit</artifactId>
@@ -24,7 +24,7 @@
 	    <scope>test</scope>
 	</dependency>
 	
-	<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+	<!--############################## TESTNG ######################################-->
 	<dependency>
 	    <groupId>org.testng</groupId>
 	    <artifactId>testng</artifactId>
@@ -32,61 +32,77 @@
 	    <scope>test</scope>
 	</dependency>
 	
-	<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+	<!--#################################### SELENIUM ##########################################3-->
 	<dependency>
 	    <groupId>org.seleniumhq.selenium</groupId>
 	    <artifactId>selenium-java</artifactId>
 	    <version>3.141.59</version>
 	</dependency>
-	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+	
+	<!--################################ APACHE POI ##########################################-->
 	<dependency>
 	    <groupId>org.apache.poi</groupId>
 	    <artifactId>poi</artifactId>
 	    <version>4.1.2</version>
 	</dependency>
 	
-	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 	<dependency>
 	    <groupId>org.apache.poi</groupId>
 	    <artifactId>poi-ooxml</artifactId>
 	    <version>4.1.2</version>
 	</dependency>
 	
-	<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+	<!--#################################### EXTENT REPORTS ###########################################-->
 	<dependency>
 	    <groupId>com.aventstack</groupId>
 	    <artifactId>extentreports</artifactId>
-	    <version>5.0.1</version>
+	    <version>5.0.6</version>
 	</dependency>
-	<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
+	
+	<!--####################################### CUCUMBER ##########################################-->
 	<dependency>
 	    <groupId>info.cukes</groupId>
 	    <artifactId>cucumber-java</artifactId>
-	    <version>1.2.5</version>
-	</dependency>
-	<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-junit -->
-	<dependency>
-	    <groupId>info.cukes</groupId>
-	    <artifactId>cucumber-junit</artifactId>
-	    <version>1.2.5</version>
-	    <scope>test</scope>
-	</dependency>
-	
-	<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
-	
-	<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
-	<dependency>
-	    <groupId>io.cucumber</groupId>
-	    <artifactId>cucumber-testng</artifactId>
 	    <version>1.2.6</version>
 	</dependency>
 
+	<dependency>
+	    <groupId>info.cukes</groupId>
+	    <artifactId>cucumber-junit</artifactId>
+	    <version>1.2.6</version>
+	    <scope>test</scope>
+	</dependency>	
 	
+	<dependency>
+	    <groupId>io.cucumber</groupId>
+	    <artifactId>cucumber-testng</artifactId>
+	    <version>6.9.1</version>
+	</dependency>
+
+		
+	<dependency>
+	    <groupId>tech.grasshopper</groupId>
+	    <artifactId>extentreports-cucumber5-adapter</artifactId>
+	    <version>2.6.0</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>info.cukes</groupId>
+	    <artifactId>gherkin</artifactId>
+	    <version>2.12.2</version>
+	    <scope>provided</scope>
+	</dependency>
+	
+	
+	<dependency>
+	    <groupId>info.cukes</groupId>
+	    <artifactId>cucumber-core</artifactId>
+	    <version>1.2.6</version>
+	    <type>pom</type>
+	</dependency>
 		
 	
-	
-	
-	
-   		
+
+  		
   </dependencies>
 </project>

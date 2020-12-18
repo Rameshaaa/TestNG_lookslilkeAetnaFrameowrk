@@ -7,6 +7,7 @@ import org.testng.internal.annotations.IListeners;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.GherkinKeyword;
 import com.aventstack.extentreports.Status;
 
 import resources.ExtentReport;
@@ -19,10 +20,15 @@ public class Listeners implements ITestListener{
 	public void onTestStart(ITestResult result) {
 		
 		 test = extent.createTest(result.getMethod().getMethodName());
+		 
+		 
+		
 	}
 
 	public void onTestSuccess(ITestResult result) {
 		test.log(Status.PASS, "Test Pass");
+		
+		
 		
 	}
 
