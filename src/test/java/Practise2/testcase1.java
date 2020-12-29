@@ -32,7 +32,7 @@ public class testcase1 extends Base implements POR{
 		b.SelectDDropDown(Drpdwn, "Option1");
 		String text = b.getText(textget);
 		System.out.println(text);
-		
+		System.out.println("New lined added");
 		
 	}
 	
